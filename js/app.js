@@ -1,19 +1,27 @@
 
 console.log("working!")
 
+//seleziono gli elementi interattivi dell'html tramite il "name"
+
 const inputTotalDistance = document.querySelector(
   "input[name='distance']"
   )
 
-const inputAgeElement = document.querySelector(
+const selectAgeElement = document.querySelector(
   "select[name='age']"
 )
 
-const formBtnElement = document.querySelector(
+const inputBtnElement = document.querySelector(
   "input[type='button']"
 )
 
-console.log(inputTotalDistance,inputAgeElement,formBtnElement)
+console.log(inputTotalDistance,selectAgeElement,inputBtnElement)
+
+//aggiungo il listener al bottone con il click
+
+inputBtnElement.addEventListener("click", function () {
+  console.log("applica modifica al prezzo")
+})
 
 
 
