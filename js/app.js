@@ -15,7 +15,14 @@ const inputBtnElement = document.querySelector(
   "input[type='button']"
 )
 
-console.log(inputTotalDistance,selectAgeElement,inputBtnElement)
+const h1ElementPrice = document.querySelector("div .prezzo_finito")
+
+console.log(
+  inputTotalDistance,
+  selectAgeElement,
+  inputBtnElement,
+  h1ElementPrice
+  )
 
 //aggiungo il listener al bottone con il click
 
