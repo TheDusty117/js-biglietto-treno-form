@@ -16,7 +16,6 @@ const selectAgeElement = document.getElementById("age-id")
 
 const inputBtnElement = document.getElementById("button-id")
 
-const h1Element = document.querySelector("div .name-lastname-sector")
 
 console.log(
   inputYourName,
@@ -33,6 +32,9 @@ inputBtnElement.addEventListener("click", function () {
   console.log
   (inputYourName.value, inputTotalDistance.value, selectAgeElement.value, )
 
+  document.getElementById("name-lastname-sector").innerHTML = inputYourName.value;
+  document.getElementById("distance-sector").innerHTML = inputTotalDistance.value;
+  document.getElementById("age-sector").innerHTML = selectAgeElement.value;
 
   
 
