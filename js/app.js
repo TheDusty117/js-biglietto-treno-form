@@ -23,24 +23,28 @@ console.log(
   selectAgeElement,
   inputBtnElement
   )
-
-//aggiungo il listener al bottone con il click
-// fin qua sotto tutto bene, il console log sembra ricevere tutte le info sopra richieste
-
-inputBtnElement.addEventListener("click", function () {
   
-  console.log
-  (inputYourName.value, inputTotalDistance.value, selectAgeElement.value, )
-
-  document.getElementById("name-lastname-sector").innerHTML = inputYourName.value;
-  document.getElementById("distance-sector").innerHTML = inputTotalDistance.value;
-  document.getElementById("age-sector").innerHTML = selectAgeElement.value;
-
+  let pricePerKm = 0.21;
   
-
-})
-
-
+  let finalPrice = inputTotalDistance * 0.21;
+  
+  //aggiungo il listener al bottone con il click
+  // fin qua sotto tutto bene, il console log sembra ricevere tutte le info sopra richieste
+  
+  inputBtnElement.addEventListener("click", function () {
+    
+    console.log
+    (inputYourName.value, inputTotalDistance.value, selectAgeElement.value, pricePerKm, finalPrice)
+    
+    // document.getElementById("name-lastname-sector").innerHTML = inputYourName.value;
+    document.getElementById("distance-sector").innerHTML = finalPrice;
+    // document.getElementById("age-sector").innerHTML = selectAgeElement.value;
+    
+    
+    
+  })
+  
+  
 
 
 // let pricePerKm = 0.21;
