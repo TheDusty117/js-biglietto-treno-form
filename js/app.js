@@ -6,45 +6,38 @@ console.log("working!")
 
 //seleziono gli elementi interattivi dell'html tramite il "name"
 
-const inputYourName = document.querySelector(
-  "input[name='your-name']"
-)
+// const inputYourName = document.getElementById("nomeid")
 
-const inputTotalDistance = document.querySelector(
-  "input[name='distance']"
-)
+const inputYourName = document.getElementById("name-id");
 
-const selectAgeElement = document.querySelector(
-  "select[name='age']"
-)
+const inputTotalDistance = document.getElementById("distance-id")
 
-const inputBtnElement = document.querySelector(
-  "input[type='button']"
-)
+const selectAgeElement = document.getElementById("age-id")
+
+const inputBtnElement = document.getElementById("button-id")
 
 const h1Element = document.querySelector("div .name-lastname-sector")
 
 console.log(
+  inputYourName,
   inputTotalDistance,
   selectAgeElement,
-  inputBtnElement,
-  inputYourName
+  inputBtnElement
   )
 
 //aggiungo il listener al bottone con il click
+// fin qua sotto tutto bene, il console log sembra ricevere tutte le info sopra richieste
 
 inputBtnElement.addEventListener("click", function () {
-  console.log("applica tutto")
-
+  
   console.log
   (inputYourName.value, inputTotalDistance.value, selectAgeElement.value, )
-
-  let  = document.getElementById("name-lastname-sector")
 
 
   
 
 })
+
 
 
 
