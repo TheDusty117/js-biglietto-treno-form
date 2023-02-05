@@ -46,7 +46,7 @@ console.log("funziono! :)")
 // credo delle variabili agganciandole all'html in modo tale da poter utilizzare
 //IL RISULTATO dell'inserimento dell'utente e utilizzarlo per IL MIO CALCOLO!
 
-const prezzoPerKm = 0.21  //var del prezzo per 1 km
+const prezzoPerKm = 0.21  //variabile del prezzo per 1 km---------------------
 
 const inputDistanceElement = document.getElementById("distance-id")
 console.log(inputDistanceElement)  //dichiaro var dell'input nel html
@@ -57,6 +57,9 @@ console.log(selectDiscountElement)  //dichiaro variabile del selettore sconto/fa
 const inputBtnElement = document.getElementById("calculate-id")
 console.log(inputBtnElement)    //dichiaro var del input bottone sempre prendendo dal doc.html
 
+// AGGIUNGI VARIABILE CON INNERHTML CORRISPONDENTE AL RISULTATO
+
+const resultElement = document.getElementById("risultato-id")
 
 //AL CLICK IL PULSANTE CALCOLA IL PREZZO DEL BIGLIETTO 
 // * tenendo conto delle variabili inserite sopra
@@ -91,8 +94,8 @@ inputBtnElement.addEventListener ("click", function (){
   }
 
   const finalPrice = prezzoBase - discount
-  console.log(finalPrice) // controllo che venga applicato lo sconto in base alla select selezionata tramite il value!!!
+  console.log(prezzoBase, discount, finalPrice) // controllo che venga applicato lo sconto in base alla select selezionata tramite il value!!!
 
-  //DA QUI IN POI DOV
+  resultElement.innerHTML = finalPrice.toFixed(2) + ' euro'
 
-})
+}) // FINE DELLA FUNZIONE E CALCOLI
