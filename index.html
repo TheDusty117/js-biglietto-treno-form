@@ -14,38 +14,84 @@
 
 <body>
   
-
-  <div id="form-dash" class="container pt-4">
+  <h1 class="text-center text-light">calcola il prezzo del tuo biglietto</h1>
+  
+  <div class="container pt-4 pb-4 mt-4 bg-danger text-center rounded">
     <div class="row">
-      <div class="col-12">
+      
 
-        <!-- chiedo il nome -->
-        <!-- <input type="text" id="name-id" name="your-name" class="form-control mb-2" placeholder="inserisci il tuo nome"> -->
-
-        <!-- chiedo distanza -->
+      <div class="col-4">
+        <h3 class="text-light">Nome Cognome</h3>
+        <input type="text" id="nome-cognome-id" class="form-control mb-2">
+      </div>
+      
+      <div class="col-4">
+        <h3 class="text-light">Km da percorrere</h3>
         <input type="text" id="distance-id" name="distance" class="form-control mb-2" placeholder="inserisci distanza">
-        
-        <!-- select delle eta' -->
-        <select id="discount-id" name="sconto" class="form-control mb-2" >
+
+      </div>
+
+      <div class="col-4">
+        <h3 class="text-light">Fascia d'età</h3>
+        <select id="discount-id" name="sconto" class="form-control mb-2 d-flex" >
           <option value="1">minorenne</option>
           <option value="2">over 65</option>
           <option value="">nessuno sconto</option>
         </select>
 
-        <!-- bottone per calcolare e applicare il tutto -->
-        <input id="calculate-id" type="button" class="btn btn-secondary" value="genera">
+      </div>
 
-        <!-- <div class="col-12">
-          <h1 id="name-lastname-sector">nome e cognome</h1>
-          <h1 id="distance-sector">distanza da percorrere</h1>
-          <h1 id="age-sector">eta'</h1>
-        </div> -->
-        <div id="risultato-id"></div>
+      <div class="col-12 text-center pt-5 pb-4">
+        <input id="calculate-id" type="button" class="btn btn-secondary" value="genera">
+        <input id="reset-id" type="button" class="btn btn-secondary" value="annulla">
+
+      </div>
+      
+      <div class="col-12">
+        
+        
 
 
         </div>
       </div>
     </div>
+
+    <h1 class="text-center text-light mt-4">il tuo biglietto</h1>
+
+
+    <div class="container pt-4 pb-4 mt-4 bg-danger rounded">
+      <div class="row">
+        <h3 class="pb-4 pt-4">dettaglio passeggeri</h3>
+
+        <div class="col-4 bg-secondary rounded-end">
+          <h3 class="pb-4">nome passeggero</h3>
+          <h4 id="risultato-nome-id"></h4>
+        </div>
+
+        <div class="col-2 bg-light rounded-start ">
+          <h3 class="pb-4">Offerta</h3>
+          <h4>biglietto standard</h4>
+        </div>
+
+        <div class="col-2 bg-light ">
+          <h3 class="pb-4">Carrozza</h3>
+          <h4>17</h4>
+        </div>
+
+        <div class="col-2 bg-light ">
+          <h3 class="pb-4">Codice CP</h3>
+          <h4>929292</h4>
+        </div>
+
+        <div class="col-2 bg-light">
+          <h3 class="pb-4">Costo biglietto</h3>
+          <h4 id="risultato-id"></h4>
+        </div>
+
+      </div>
+    </div>
+
+
   </div>
 
   

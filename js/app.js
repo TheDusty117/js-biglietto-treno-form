@@ -46,7 +46,9 @@ console.log("funziono! :)")
 // credo delle variabili agganciandole all'html in modo tale da poter utilizzare
 //IL RISULTATO dell'inserimento dell'utente e utilizzarlo per IL MIO CALCOLO!
 
-const prezzoPerKm = 0.21  //variabile del prezzo per 1 km---------------------
+const prezzoPerKm = 0.21  //variabile del prezzo per 1 km
+
+const inputNameElement = document.getElementById("nome-cognome-id")
 
 const inputDistanceElement = document.getElementById("distance-id")
 console.log(inputDistanceElement)  //dichiaro var dell'input nel html
@@ -59,6 +61,8 @@ console.log(inputBtnElement)    //dichiaro var del input bottone sempre prendend
 
 // AGGIUNGI VARIABILE CON INNERHTML CORRISPONDENTE AL RISULTATO
 
+const resultName = document.getElementById("risultato-nome-id")
+
 const resultElement = document.getElementById("risultato-id")
 
 //AL CLICK IL PULSANTE CALCOLA IL PREZZO DEL BIGLIETTO 
@@ -67,6 +71,10 @@ const resultElement = document.getElementById("risultato-id")
 // INIZIO FUNZIONE CON SEGUENTE CALCOLO AL CLICK! ----------------------
 
 inputBtnElement.addEventListener ("click", function (){
+
+  //STAMPARE NOME IN HTML
+  resultName.innerHTML = inputNameElement.value // inserira' in html il valore di cio che scrivo nell'input name
+                                                // in questo caso parliamo del text, quindi cio che scrivo
 
   //DEFINIRE PREZZO BASE
   let km = inputDistanceElement.value
